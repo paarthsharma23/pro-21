@@ -4,13 +4,13 @@ var deformtion;
 function setup (){
 createCanvas(1600,400);
 
+thickness = random(22,83);
+
 wall=createSprite(1400,200,thickness,height/2);
 
 bullet=createSprite(0,200,50,20);
 bullet.velocityX=2;
 bullet.shapeColor="red";
-
-thickness = random(22,83);
 
 speed = random(223,321);
 
@@ -64,11 +64,11 @@ bullet.depth=wall.depth+1;
 
 
 
-defomation(){
+function defomation(){
 
     if(deformation<10){
         bullet.shapeColor="green";
-    }else if(deformation>10){
+    }else{
         bullet.shapeColor="red";
     }
 }
